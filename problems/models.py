@@ -7,7 +7,9 @@ from django.db import models
 
 class SetOneQuestions(models.Model):
     qid = models.IntegerField()
-    name = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    question = models.TextField(default='')
+    answer = models.TextField(default='')
 
     def __str__(self):
-        return self.name
+        return self.title
