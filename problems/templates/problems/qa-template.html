@@ -6,7 +6,7 @@
 {{ question.question }}
 
 <form action="{{qurl}}" method="post">
-  <textarea rows="1" cols="100" name="answer" id="answer"></textarea><br><br>
+  {{ answer_form }}
   <input type="submit" value="Submit">
   {% csrf_token %}
 </form>
