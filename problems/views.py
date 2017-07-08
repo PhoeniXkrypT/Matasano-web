@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
+from .models import SetOneQuestions
+
 # Create your views here.
 
 def index(request):
@@ -11,6 +13,6 @@ def index(request):
     return render(request, 'problems/index.html', context)
 
 def set_one(request):
-    questions = ['Q1']
+    questions = SetOneQuestions.objects.all()
     context = {'questions' : questions}
     return render(request, 'problems/set1.html', context)
