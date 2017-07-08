@@ -1,0 +1,11 @@
+
+<p> Challenges Set 1</p>
+{% if questions %}
+  <ul>
+    {% for each in questions %}
+    <li>{{ each }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+<p> No questions in Set 1.</p>
+{% endif %}

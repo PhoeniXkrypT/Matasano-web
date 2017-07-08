@@ -10,4 +10,7 @@ def index(request):
     context = {'problem_sets' : problem_sets}
     return render(request, 'problems/index.html', context)
 
-
+def set_one(request):
+    questions = ['Q1']
+    context = {'questions' : questions}
+    return render(request, 'problems/set1.html', context)
