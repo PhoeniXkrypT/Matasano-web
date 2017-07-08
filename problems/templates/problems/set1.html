@@ -1,11 +1,15 @@
 
+{% extends "problems/base.html" %}
+
+{% block content %}
 <p> Challenges Set 1</p>
 {% if questions %}
   <ul>
     {% for each in questions %}
-    <li>{{ each }}</li>
+    <li><a href="/problems/Set1/{{each.qid}}">{{ each.name }}</a></li>
     {% endfor %}
   </ul>
 {% else %}
 <p> No questions in Set 1.</p>
 {% endif %}
+{% endblock %}

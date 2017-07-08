@@ -1,12 +1,14 @@
 
-<p> Matasano Crypto Challenges</p>
+{% extends "problems/base.html" %}
 
+{% block content %}
 {% if problem_sets %}
   <ul>
-    {% for each in problem_sets %}
-    <li><a href="/problems/Set1">{{ each }}</a></li>
+    {% for ques, qname in problem_sets %}
+    <li><a href="/problems/{{ques}}">{{ qname }}</a></li>
     {% endfor %}
   </ul>
 {% else %}
 <p> No problem sets.</p>
 {% endif %}
+{% endblock %}
