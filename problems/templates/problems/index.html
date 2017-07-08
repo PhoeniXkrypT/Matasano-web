@@ -5,7 +5,7 @@
 {% if problem_sets %}
   <ul>
     {% for ques, qname in problem_sets %}
-    <li><a href="/problems/{{ques}}">{{ qname }}</a></li>
+    <p><a href="/problems/{{ques}}">{{ qname }}</a></p>
     {% endfor %}
   </ul>
 {% else %}

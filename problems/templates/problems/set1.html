@@ -6,7 +6,7 @@
 {% if questions %}
   <ul>
     {% for each in questions %}
-    <li><a href="/problems/Set1/{{each.qid}}">{{ each.name }}</a></li>
+    <p>{{each.qid}}. <a href="/problems/Set1/{{each.qid}}">{{ each.name }}</a></p>
     {% endfor %}
   </ul>
 {% else %}
