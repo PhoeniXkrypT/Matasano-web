@@ -2,8 +2,11 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from django.urls import reverse
 
 from .models import SetOneQuestions
+
+import common_view
 
 # Create your views here.
 
@@ -23,3 +26,12 @@ def set_one(request):
     questions = SetOneQuestions.objects.all()
     context = {'questions' : questions}
     return render(request, 'problems/set1.html', context)
+
+def set_one_dispatcher(request, pno):
+    question = SetOneQuestions.objects.filter(qid=int(pno))[0]
+    qurl = reverse('set_one_dispatcher', args=(pno,))
+    ret = common_view.qa_view(request, question, qurl)
+    return ret
+
+
+
