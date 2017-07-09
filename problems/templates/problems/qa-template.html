@@ -3,7 +3,7 @@
 {% block content %}
 
 <b> {{question.title}} </b>
-{{ question.question }}
+<pre>{{ question.question }} </pre>
 
 <form action="{{qurl}}" method="post">
   {{ answer_form }}
